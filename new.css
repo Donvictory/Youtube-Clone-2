@@ -1,9 +1,39 @@
-body{
-    height: 1000px;
-    background-color: rgb(244, 244, 244);
+.big-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 15px;
+    justify-content: center;
+    margin-top: 70px;
+    margin-left: 70px;
+    column-gap: 15px;
 }
 p{
     margin: 0;
+}
+.grid-container{
+    display: grid;
+    border: 1px solid grey;
+    width: auto;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+.grid-box-1{
+   display: grid;
+   grid-template-columns: 40px 1fr;
+   grid-column-gap: 20px;
+   place-content: center;
+   margin-top: 5px;
+}
+.grid-box-2 img{
+    border-radius: 50%;
+    margin-left: 8px;
+}
+strong{
+    margin-bottom: 20px;
+}
+img{
+    max-width: 100%;
 }
 .header{
     display: flex;
@@ -80,6 +110,7 @@ button{
 button img{
     height: 24px;
 }
+
 .voice-search-icon{
     border-radius: 100%;
     height: 40px;
@@ -129,6 +160,7 @@ button img{
     margin-top: 5px;
     background-color: white;
     z-index: 1;
+    justify-content: space-evenly;
 }
 
 nav div{
@@ -148,29 +180,26 @@ nav div{
 nav div:hover{
     background-color: rgb(240, 240, 240);
 }
-.video-cover{
-    display: grid;
-    width: 240px;
-    margin-left: 95px;
-    margin-top: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-}
 .video-content{
-    display: flex;
-    flex-direction: column;
-    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(240, 240, 240);
+    margin-left: 90px;
+    margin-top: 70px;
+    height: 224.5px;
+    column-gap: 20px;
 }
-.video-image img{
-    height: 140px;
-    width: auto;
+.video-author{
+    color: grey;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
-.video-info{
-    display: flex;
-    margin-top: 10px;
+.video-stat{
+    color: gray;
+    font-size: 14px;
 }
-.channel-profile img{
-    height: 40px;
-    border-radius: 20px;
-    margin-right:10px;
+.video-title{
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 20px;
 }
